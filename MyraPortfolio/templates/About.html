@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    @keyframes transitionIn {
+      from {
+          opacity: 0;
+          transform: rotateX(-10deg);
+        }
+        to {
+          opacity: 1;
+          transform: rotateX(0);
+        }
+    }
+  * {
+      font-family: Caladea;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #242526;
+  }
+  body {
+      background-color: #242526;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; 
+      animation: transitionIn 0.75s;
+  }
+      .navbar {
+            background-color: #242526;
+            overflow: hidden;
+            padding: 0 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .navbar a {
+            text-decoration: none;
+            padding: 14px 16px;
+            color: #fff;
+        }
+      
+        .content {
+            flex: 1; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #EDE9E8; 
+        }
+        .content-container {
+            background: #fff;  
+            padding: 50px;
+            text-align: center;
+            max-width: 1000px;
+            width: 100%;
+			border-radius: 50px;
+        }
+
+.about-containers {
+  gap: 2rem;
+}
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers, .about-details-container {
+  display: flex;
+}
+
+
+
+
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color:rgb(163, 163, 163);
+  text-align: center;
+}
+
+.about-pic {
+  border-radius: 30px;
+}
+
+
+
+		
+		
+    </style>
+       <div class="navbar">
+        <nav>
+          <a href="{% url 'HomePage'%}">Home</a>
+          <a href="{% url 'Experiences'%}">Experiences</a>
+        <a href="{% url 'Achievements'%}">Achievements</a>
+        <a href="{% url 'Contacts'%}">Contacts</a>
+        </nav>
+    </div>
+      
+    <div class="content">
+        <div class="content-container">
+        <h1 class="title">About Me</h1>
+  <div class="container"> 
+  <div class="pic-container">
+  <img src="{% static 'proff.jpg'%}" class="about-pic">
+     </div>
+     <div class="about-details-container"> 
+     <div class="about-containers">
+       <div class="details-container">
+        <img src="{% static 'expertise.png'%}"
+         class="links-container"
+         />
+         <h3>Experience</h3>
+         <br>
+         <p> I'am Newbe <br>Frontend Development</p>
+       </div>
+       <div class="details-container">
+         <img src="{% static 'edu.png'%}"
+         class="links-container"
+           />
+         <h3>Education</h3>
+         <br>
+         <p> BSIT <br>Bachelor of Science Information Technology </p>
+          </div>
+        </div>
+		<br></br>
+     <div class="text-container">
+       <p> With a passion for innovation, I am a dedicated professional in the field of software development. Armed with a comprehensive skill set that includes programming languages such as Python and Java, I thrive on creating efficient and scalable solutions. My experience extends to managing comprehensive marketing plans, from conceptualization to execution, ensuring brand consistency and impactful market presence. I thrive on challenging projects that allow me to blend creativity with data-driven decision-making</p>
+     </div>
+     </div>
+  </div>
+  <img src="arrow.png" alt="Arrow icon"
+  class="icon arrow"
+  onclick="location.href='./#experience'"
+  />
+</body>
+</html>

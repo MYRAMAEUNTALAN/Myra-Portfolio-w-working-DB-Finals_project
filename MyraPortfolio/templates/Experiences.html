@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    @keyframes transitionIn {
+        from {
+            opacity: 0;
+            transform: rotateX(-10deg);
+          }
+          to {
+            opacity: 1;
+            transform: rotateX(0);
+          }
+      }
+    * {
+        font-family: Caladea;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #242526;
+    }
+    body {
+        background-color: #242526;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; 
+        animation: transitionIn 0.75s;
+    }
+      .navbar {
+            background-color: #242526;
+            overflow: hidden;
+            padding: 0 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .navbar a {
+            text-decoration: none;
+            padding: 14px 16px;
+            color: #fff;
+        }
+        .navbar a:hover {
+            background-color: #fff;
+            color: #202020;
+        }
+        .content {
+            flex: 1; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #EDE9E8; 
+        }
+        .content-container {
+            background: #fff;  
+            padding: 50px;
+            text-align: center;
+            max-width: 1000px;
+            width: 100%;
+			border-radius: 50px;
+        }
+		
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.experience-container {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    background-color: #fff; 
+    text-align: center;
+}
+
+/* Style the experience icon */
+.experience-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+/* Style the experience details */
+.experience-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-title {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.experience-description {
+    font-size: 0.9em;
+    color: #666;
+}
+ 
+
+    </style>
+       <div class="navbar">
+        <nav>
+            <a href="{% url 'HomePage'%}">Home</a>
+            <a href="{% url 'About'%}">About</a>
+          <a href="{% url 'Achievements'%}">Achievements</a>
+          <a href="{% url 'Contacts'%}">Contacts</a>
+        </nav>
+    </div>
+    
+    <div class="content">
+        <div class="content-container">
+            <h1>Experiences</h1>
+			<br></br>
+		 <section id="experience">
+    
+
+   <div class="experience-container">
+      <div class="experience-item">
+        <img src="{% static 'html.png'%}" class="about-pic">
+         <div class="experience-details">
+            <h2 class="experience-title">HTML</h2>
+            <p class="experience-description">Experience in HTML5 markup language for web development.</p>
+         </div>
+      </div>
+
+      <div class="experience-item">
+        <img src="{% static 'css.png'%}" class="about-pic">
+         <div class="experience-details">
+            <h2 class="experience-title">CSS</h2>
+            <p class="experience-description">Proficiency in styling web pages using CSS3 for responsive design.</p>
+         </div>
+      </div>
+
+      <div class="experience-item">
+        <img src="{% static 'javascript.png'%}" class="about-pic">
+         <div class="experience-details">
+            <h2 class="experience-title">JavaScript</h2>
+            <p class="experience-description">Skills in client-side scripting with JavaScript for interactive web applications.</p>
+         </div>
+      </div>
+
+      <div class="experience-item">
+        <img src="{% static 'python.png'%}" class="about-pic">
+         <div class="experience-details">
+            <h2 class="experience-title">Python</h2>
+            <p class="experience-description">Knowledge in Python programming language for backend development tasks.</p>
+         </div>
+      </div>
+   </div>
+    
+
+</body>
+</html>
